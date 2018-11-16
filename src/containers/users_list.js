@@ -4,11 +4,12 @@ import {connect} from "react-redux";
 class UsersList extends Component {
 
 
-    renderUsers(usersData) {
-        usersData.users.map((user) => {
-            console.log("User data: ", user);
-            const userId = user.id;
-            console.log("userId: ", userId);
+    renderUsers(userData) {
+        /*usersData.users.map((user) => {
+            console.log("Single user data: ", user);
+            console.log("userId: ", user.id);
+            console.log("user first name: ", user.first_name);
+            console.log("user last name: ", user.last_name);
                 return (
                     <tr key={user.id}>
                         <td>{user.id}</td>
@@ -19,14 +20,15 @@ class UsersList extends Component {
                         <td>{user.ip_address}</td>
                     </tr>
                 )
-            });
-
-        /*const userId = usersData.users.map(users => users.id);
-        const firstName = usersData.users.map(users => users.first_name);
-        const lastName = usersData.users.map(users => users.last_name);
-        const email = usersData.users.map(users => users.email);
-        const gender = usersData.users.map(users => users.gender);
-        const ipAddress = usersData.users.map(users => users.ip_address);
+            });*/
+        console.log("Users data JSON: ", userData);
+        const userId = userData.users.map(users => users.id);
+        console.log("userId: ", userId);
+        const firstName = userData.users.map(users => users.first_name);
+        const lastName = userData.users.map(users => users.last_name);
+        const email = userData.users.map(users => users.email);
+        const gender = userData.users.map(users => users.gender);
+        const ipAddress = userData.users.map(users => users.ip_address);
 
         return (
             <tr key={userId}>
@@ -37,7 +39,7 @@ class UsersList extends Component {
                 <td>{gender}</td>
                 <td>{ipAddress}</td>
             </tr>
-        );*/
+        );
     }
 
     render() {
