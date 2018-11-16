@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UsersList from './containers/users_list';
+import SearchBar from './containers/search_bar';
 
 class App extends Component {
   render() {
@@ -20,6 +22,11 @@ class App extends Component {
             Learn React
           </a>
         </header>
+          <div>
+              <h1>Users Table</h1>
+          </div>
+          <SearchBar/>
+          <UsersList/>
       </div>
     );
   }
